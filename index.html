@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <p>*FUNCTION HANDSON*</p>
+    <h3>Q1.Create one function with zero parameter having a console statement.</h3>
+    <pre>
+        function callMe(){
+            console.log("Hello This is ME!!")
+        }
+        callMe(); 
+    </pre>
+    →Hello This is ME!!
+    <hr>
+    <h3>Q2.Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7" .
+    </h3>
+    <pre>
+        function ABC(a,b){
+            var a=3;
+            var b=4;
+            var c=a+b;
+            console.log(" sum of "+ a +" and "+ b +" is "+ c)
+        }
+        ABC();
+    </pre>
+    →Sum of 3 and 4 is 7
+    
+    <hr>
+    <h3>Q3.Create one arrow function.</h3>
+    <pre>
+        var sum=(a,b)=>{
+            var a=4;
+            var b=5;
+            var c=a+b;
+            console.log(" sum of "+ a +" and "+ b +" is "+ c)
+        
+        }
+        sum();  
+    </pre>
+    → Sum of 4 and 5 is 9 therefore, here i am using arrow function.
+    
+    <hr>
+    <h3>Q4.Print output: <br><br>
+        var x = 21;<br>
+        var girl = function () {<br>
+        console.log(x);<br>
+        var x = 20;<br>
+        };<br>
+        girl ();</h3>
+        →The reason for output being 'undefined' instead of '21' is due to variable hoisting .The variable 'x' is
+    declared inside
+    the 'girl' function .wherever we declare a variable without assigning any value to it, javascript implicitly assigns
+    its
+    value as 'undefined'.
+    <hr>
+    <h3>Q5.Print output:<br> <br>
+        var x = 21;<br>
+        girl ();<br>
+        console.log(x)<br>
+        function girl() {<br>
+        console.log(x);<br>
+        var x = 20;<br>
+        };<br>
+    </h3>
+
+    →The output is undefined because the local variable 'x' is hoisted that is it exists but has no value assigned yet.
+    outside the'girl' function the console.log (x) statement is executed.since there is a global variable 'x' declared and assigned the value 21 ,it 
+    is accessible here. so the output will be 21.
+    <hr>
+    <h3>Q6.Print output:<br><br>
+
+        var x = 21;<br>
+        a();<br>
+        b();<br>
+
+        function a() {<br>
+
+        x = 20;<br>
+        console.log(x);<br>
+        };<br>
+        function b() {<br>
+
+        x = 40;<br>
+        console.log(x);<br>
+        };</h3>
+    →The variable x is initially assigned a value of 21.<br>
+    The function a() is called, which sets the value of x to 20 and then prints it. So, the output is 20.<br>
+    The function b() is called, which sets the value of x to 40 and then prints it. So, the output is 40.<br>
+    <hr>
+    <h3>Q7.Write a function that accepts parameter n and returns factorial of n.</h3>
+    → we are calculating the factorial of 5, which is 5! = 5 * 4 * 3 * 2 *1
+    <hr>
+    <p>DAY- 2</p>
+    <h3>Q1."Guess the Output" <br><br>
+
+        function FindSum(a, b){<br>
+        return a + b;<br>
+        }<br>
+
+        function DisplayData(data, batch){<br>
+        console.log(`i am from ${data} and My batch is EA${batch}`)<br>
+        }<br>
+
+        DisplayData(""PrepBytes"", FindSum(10, 9));</h3><br>
+        →Find sum (a,b)-This function takes two parameter 'a' and 'b' and return their sum is 19 .This value is passes as the ' batch' 
+        argument to the 'Display Data' function ,along with the string "prepbytes" as the 'data' argument .Therefore the output will be 
+        "i am from Prepbytes and My batch is EA19".
+
+
+    <hr>
+
+    <h3>Q2."Guess the output"<br><br>
+
+        Abc();<br>
+        const Abc = function(){<br>
+        let value = 20;<br>
+        console.log(value);<br>
+        }</h3>
+        →Cannot Access 'Abc' after initialization.  
+    <hr>
+    <h3>Q3."Guess the output"<br><br>
+
+        var a = 10;<br>
+        (function (){<br>
+        console.log(a);<br>
+        var a = 20;<br>
+        })();</h3>
+        →Since 'a' is called before declaration inside the function() its being hoisted and javascript declares the default value as undefined 
+        so it shows undefined.
+    <hr>
+    <h3>Q4."Guess the Output"<br><br>
+        const greet = function(name){<br>
+        return function(m){<br>
+
+        console.log(`Hi!! ${name}, ${m}`);<br>
+        }<br>
+        }<br>
+
+        const greet_message = greet('EA19');<br>
+        greet_message("Welcome To PrepBytes")</h3>
+
+        →Function 'greet' that takes a 'name' parameter. Inside 'greet',another function is returned ,which takes a parameter 'm'.when
+        this inner function is called,it prints a greeting message using the 'name' parameter and the 'm' parameter passed to it.
+        'greet _message' is assigned the result of calling 'greet'('EA19').it means that 'greet_message' becomesthe inner function returned by
+        'greet',with the 'name'parameter set to 'EA19'.so,'greet_message'passing 'welcome To Prepbytes' as an argument for 'm'.This invokes the function,so
+        the output shows that "Hi!! EA19, Welcome To PrepBytes".
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(240, 185, 204);
+}
+
+P{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bolder;
+  font-style: italic;
+  text-decoration: underline;
+}
